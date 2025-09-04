@@ -1,0 +1,70 @@
+/* ── Retro Waybar Style (Roomier) ───────────────────── */
+
+* {
+	font-family: "JetBrains Mono", "Terminus", monospace;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	min-height: 0;
+}
+
+window#waybar {
+	background: #1c1c1c;
+	color: #00ff66;
+	border-bottom: 2px solid #00ff66;
+	box-shadow: inset 0 -2px 0 #003300;
+	padding: 8px 10px; /* ⬅ adds vertical + horizontal padding */
+}
+
+#workspaces button {
+	background: transparent;
+	color: #00ff66;
+	padding: 6px 14px; /* ⬅ more padding per button */
+	margin: 0 3px;
+	border: 1px solid #00ff66;
+	border-radius: 0;
+	transition: background 0.2s;
+}
+
+#workspaces button.focused {
+	background: #003300;
+	color: #00ffcc;
+}
+
+#workspaces button:hover {
+	background: #001a00;
+}
+
+#clock,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#network {
+	padding: 6px 14px; /* ⬅ more breathing room */
+	/* border-left: 1px solid #00ff66; */
+}
+
+#battery.warning {
+	color: #ffcc00;
+}
+
+#tray {
+	margin-right: 10px;
+}
+
+#battery.critical {
+	color: #ff0000;
+	background: #330000;
+}
+
+#pulseaudio.muted {
+	color: #555555;
+}
+
+tooltip {
+	background: #000000;
+	color: #00ff66;
+	border: 1px solid #00ff66;
+	padding: 6px 10px; /* ⬅ roomier tooltips */
+}

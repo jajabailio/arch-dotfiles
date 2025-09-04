@@ -1,0 +1,28 @@
+general.working_directory = "~/Documents/workspace"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "none"
+
+opacity = 0.88
+blur = false 
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+
+size = 17
+
+[debug]
+log_level = "Off"
+
+[mouse]
+hide_when_typing = true
+
+
+[colors.cursor]
+cursor = "#00ff66"
+text   = "#000000"

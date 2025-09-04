@@ -1,0 +1,15 @@
+pane	responsibid	0	0	:	0	root@c8e4b3fe1a07: /code/website	:/home/janssen	1	lazydocker	:lazydocker
+pane	responsibid	1	0	:-	0	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-client-v2	1	nvim	:nvim
+pane	responsibid	1	0	:-	1	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-client-v2	0	zsh	:
+pane	responsibid	1	0	:-	2	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-client-v2	0	node	:node /usr/bin/yarn dev
+pane	responsibid	2	1	:*Z	0	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-server	1	nvim	:nvim
+pane	responsibid	2	1	:*Z	1	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-server	0	zsh	:
+pane	responsibid	3	0	:	0	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-php	1	zsh	:
+pane	responsibid	3	0	:	1	archbox	:/home/janssen/Documents/workspace	0	zsh	:
+pane	responsibid	4	0	:	0	archbox	:/home/janssen/Documents/workspace/symphosize/responsibid-client	1	zsh	:
+window	responsibid	0	:lazydocker	0	:	cc9e,261x48,0,0,1	off
+window	responsibid	1	:client-v2	0	:-	4df3,261x48,0,0{121x48,0,0,2,139x48,122,0[139x29,122,0,3,139x18,122,30,4]}	off
+window	responsibid	2	:server	1	:*Z	3e4f,261x48,0,0{130x48,0,0,5,130x48,131,0,6}	off
+window	responsibid	3	:legacy	0	:	e4e2,261x48,0,0{125x48,0,0,7,135x48,126,0,9}	off
+window	responsibid	4	:client-v1	0	:	cca5,261x48,0,0,8	off
+state	responsibid	
