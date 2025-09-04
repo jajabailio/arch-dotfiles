@@ -1,0 +1,91 @@
+-- return {
+--   { "nvim-neotest/neotest-plenary" },
+--   {
+--     "nvim-neotest/neotest",
+--     dependencies = {
+--       "haydenmeade/neotest-jest",
+--       "marilari88/neotest-vitest",
+--     },
+--     opts = function(_, opts)
+--       table.insert(
+--         opts.adapters,
+--         require("neotest-jest")({
+--           jestCommand = "npm test --",
+--           jestConfigFile = "custom.jest.config.ts",
+--           env = { CI = true },
+--           cwd = function()
+--             return vim.fn.getcwd()
+--           end,
+--         })
+--       )
+--       table.insert(opts.adapters, require("neotest-vitest"))
+--     end,
+--     keys = {
+--       { "<leader>tj", "", desc = "+test" },
+--       {
+--         "<leader>tjt",
+--         function()
+--           require("neotest").run.run(vim.fn.expand("%"))
+--         end,
+--         desc = "Run File",
+--       },
+--       {
+--         "<leader>tjT",
+--         function()
+--           require("neotest").run.run(vim.uv.cwd())
+--         end,
+--         desc = "Run All Test Files",
+--       },
+--       {
+--         "<leader>tjr",
+--         function()
+--           require("neotest").run.run()
+--         end,
+--         desc = "Run Nearest",
+--       },
+--       {
+--         "<leader>tjl",
+--         function()
+--           require("neotest").run.run_last()
+--         end,
+--         desc = "Run Last",
+--       },
+--       {
+--         "<leader>tjs",
+--         function()
+--           require("neotest").summary.toggle()
+--         end,
+--         desc = "Toggle Summary",
+--       },
+--       {
+--         "<leader>tjo",
+--         function()
+--           require("neotest").output.open({ enter = true, auto_close = true })
+--         end,
+--         desc = "Show Output",
+--       },
+--       {
+--         "<leader>tjO",
+--         function()
+--           require("neotest").output_panel.toggle()
+--         end,
+--         desc = "Toggle Output Panel",
+--       },
+--       {
+--         "<leader>tjS",
+--         function()
+--           require("neotest").run.stop()
+--         end,
+--         desc = "Stop",
+--       },
+--       {
+--         "<leader>tjw",
+--         function()
+--           require("neotest").watch.toggle(vim.fn.expand("%"))
+--         end,
+--         desc = "Toggle Watch",
+--       },
+--     },
+--   },
+-- }
+return {}

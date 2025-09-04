@@ -1,0 +1,100 @@
+-- return {
+--   {
+--     "CopilotC-Nvim/CopilotChat.nvim",
+--     branch = "canary",
+--     dependencies = {
+--       { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+--       { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+--     },
+--     opts = {
+--       debug = true, -- Enable debugging
+--       -- See Configuration section for rest
+--       model = "gpt-4o", -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
+--       temperature = 0.1,
+--       question_header = "## User ", -- Header to use for user questions
+--       answer_header = "## Copilot ", -- Header to use for AI answers
+--       error_header = "## Error ", -- Header to use for errors
+--       separator = "───", -- Separator to use in chat
+--       show_folds = true, -- Shows folds for sections in chat
+--       show_help = true, -- Shows help message as virtual lines when waiting for user input
+--       auto_follow_cursor = true, -- Auto-follow cursor in chat
+--       auto_insert_mode = false, -- Automatically enter insert mode when opening window and if auto follow cursor is enabled on new prompt
+--       clear_chat_on_new_prompt = false, -- Clears chat on every new prompt
+--       highlight_selection = true,
+--
+--       context = nil, -- Default context to use, 'buffers', 'buffer' or none (can be specified manually in prompt via @).
+--       history_path = vim.fn.stdpath("data") .. "/copilotchat_history", -- Default path to stored history
+--       callback = nil, -- Callback to use when ask response is received
+--
+--       {
+--         window = {
+--           layout = "float",
+--           relative = "cursor",
+--           width = 1,
+--           height = 0.4,
+--           row = 1,
+--         },
+--       },
+--     },
+--     -- See Commands section for default commands if you want to lazy load on them
+--     keys = {
+--       {
+--         "<leader>ccq",
+--         function()
+--           local input = vim.fn.input("Quick Chat: ")
+--           if input ~= "" then
+--             require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+--           end
+--         end,
+--         desc = "CopilotChat - Quick chat",
+--       },
+--       {
+--         "<leader>cch",
+--         function()
+--           local actions = require("CopilotChat.actions")
+--           require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+--         end,
+--         desc = "CopilotChat - Help actions",
+--       },
+--       -- Show prompts actions with telescope
+--       {
+--         "<leader>ccp",
+--         function()
+--           local actions = require("CopilotChat.actions")
+--           require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+--         end,
+--         desc = "CopilotChat - Prompt actions",
+--       },
+--       {
+--         "<leader>cch",
+--         function()
+--           local actions = require("CopilotChat.actions")
+--           require("CopilotChat.integrations.fzflua").pick(actions.help_actions())
+--         end,
+--         desc = "CopilotChat - Help actions",
+--       },
+--       -- Show prompts actions with fzf-lua
+--       {
+--         "<leader>ccp",
+--         function()
+--           local actions = require("CopilotChat.actions")
+--           require("CopilotChat.integrations.fzflua").pick(actions.prompt_actions())
+--         end,
+--         desc = "CopilotChat - Prompt actions",
+--       },
+--     },
+--     config = function()
+--       require("CopilotChat.integrations.cmp").setup()
+--
+--       -- You might also want to disable default <tab> complete mapping for copilot chat when doing this
+--       require("CopilotChat").setup({
+--         mappings = {
+--           complete = {
+--             insert = "",
+--           },
+--         },
+--         -- rest of your config
+--       })
+--     end,
+--   },
+-- }
